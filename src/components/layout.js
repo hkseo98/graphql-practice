@@ -18,7 +18,7 @@ export default function Layout({ children }) {
   return (
     <div
       style={css`
-        margin: 0 auto;
+        margin: 10 auto;
         max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
       <Link to={`/`}>
         <h3
           css={css`
-            margin-bottom: ${rhythm(2)};
+            margin: ${rhythm(1)};
             display: inline-block;
             font-style: normal;
           `}
@@ -39,12 +39,15 @@ export default function Layout({ children }) {
         to={`/about/`}
         css={css`
           float: right;
-          margin-right: 10px;
+          margin: ${rhythm(1)};
         `}
       >
         About
       </Link>
-      {children}
+      <div css={css`
+          float: right;
+          margin: ${rhythm(1)};
+        `}>{children}</div>
     </div>
   )
 }
